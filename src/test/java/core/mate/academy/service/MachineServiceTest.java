@@ -25,28 +25,28 @@ public class MachineServiceTest {
     public void getAll_bulldozerType() {
         List<Machine> actual = machineService.getAll(Bulldozer.class);
         assertEquals("The list should contain elements of type Bulldozer",
-            Bulldozer.class, actual.get(0).getClass());
+                Bulldozer.class, actual.get(0).getClass());
     }
 
     @Test
     public void getAll_excavatorType() {
         List<Machine> actual = machineService.getAll(Excavator.class);
         assertEquals("The list should contain elements of type Excavator",
-            Excavator.class, actual.get(0).getClass());
+                Excavator.class, actual.get(0).getClass());
     }
 
     @Test
     public void getAll_truckType() {
         List<Machine> actual = machineService.getAll(Truck.class);
         assertEquals("The list should contain elements of type Truck",
-            Truck.class, actual.get(0).getClass());
+                Truck.class, actual.get(0).getClass());
     }
 
     @Test
     public void getAll_invalidType() {
         List<Machine> actual = machineService.getAll(Machine.class);
         assertEquals("For the unknown class you should return empty list",
-            Collections.emptyList(), actual);
+                Collections.emptyList(), actual);
     }
 
     @Test
@@ -60,7 +60,7 @@ public class MachineServiceTest {
         assertEquals("The list size shouldn't change", randomSize, machines.size());
         for (Object machine : machines) {
             assertEquals("The list should contain elements of type Bulldozer",
-                Bulldozer.class, machine.getClass());
+                    Bulldozer.class, machine.getClass());
         }
     }
 
@@ -75,7 +75,7 @@ public class MachineServiceTest {
         assertEquals("The list size shouldn't change", randomSize, machines.size());
         for (Object machine : machines) {
             assertEquals("The list should contain elements of type Excavator",
-                Excavator.class, machine.getClass());
+                    Excavator.class, machine.getClass());
         }
     }
 
@@ -90,7 +90,7 @@ public class MachineServiceTest {
         assertEquals("The list size shouldn't change", randomSize, machines.size());
         for (Object machine : machines) {
             assertEquals("The list should contain elements of type Truck",
-                Truck.class, machine.getClass());
+                    Truck.class, machine.getClass());
         }
     }
 
